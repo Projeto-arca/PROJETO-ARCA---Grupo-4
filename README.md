@@ -19,10 +19,10 @@ Sistema web interdisciplinar para gestão de adoção e cuidado de animais.
 - **Versionamento:** Git + GitHub
 
 ## 📁 Estrutura
-- `assets/` — CSS, JS e imagens
-- `pages/` — Telas HTML
+- `frontend/assets/` — CSS, JS, imagens e ícones
+- `frontend/pages/` — Telas HTML por perfil (tutor, candidato, ong, prefeitura)
 - `backend/` — API Node.js/Express
-- `sql/` — Scripts DDL e DML
+- `sql/` — Scripts DDL, DML e DQL
 - `docs/` — Documentação, wireframes e style guide
 
 ## 🚀 Como rodar localmente
@@ -37,7 +37,7 @@ node server.js
 ```
 
 ### Frontend
-Abrir qualquer arquivo de `pages/` no navegador.
+Abrir qualquer arquivo de `frontend/pages/` no navegador.
 
 ## 🌿 Branches
 Cada integrante trabalha na sua branch e abre Pull Request para `main`.

@@ -1,1 +1,3 @@
-pinto bilau gamer
+# UX - Projeto ARCA
+# Documentação de experiência do usuário (wireframes, fluxos, anotações de tela)
+# Mover para docs/figma/ quando houver links do Figma
