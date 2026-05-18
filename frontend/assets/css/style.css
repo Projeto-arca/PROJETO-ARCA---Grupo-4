@@ -1,0 +1,30 @@
+@charset "UTF-8";
+:root { 
+ /* Cores Principais */
+   --color-primary: #1B4332; /* Títulos, ícones principais, botão salvar. */
+   --color-primary-mid: #2D6A4F;  /*  botão principal */
+   --color-primary-light:#D8F3DC;   /* badge de status "Castrado" */
+
+ /* Cores Neutras */
+    --color-border:#ADB5BD; /*  bordas e textos secundários */
+   --color-bg:#F8F9FA;   /* fundos das páginas */
+
+ /* Status */  
+  --color-error:          #E53935; /* cancelar / animal em estado grave */
+  --color-success:        #388E3C; /* salvar / castração realizada / resgate finalizado */
+  --color-warning:        #F9A825; /* em andamento */
+  --color-pending:        #EF6C00; /* pendente / atenção */
+  --color-info:           #0288D1; /* informativo */
+
+  /* Texto */
+  --color-text:       #212529; /* cor padrão do texto */
+  --color-text-muted: #6C757D; /* textos secundários / placeholders */
+
+ /* Tipografia */
+  --font-main: 'Inter', 'Montserrat', sans-serif; /* Font Principal, mudar o size de acordo com o style guide */
+
+ /* Grid */
+  --grid-landing: 1170px;
+  --grid-portal:  1100px;
+}
+
