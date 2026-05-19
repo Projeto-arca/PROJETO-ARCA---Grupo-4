@@ -1,4 +1,7 @@
 @charset "UTF-8";
+
+  /* CSS GLOBAL */
+
 :root { 
  /* Cores Principais */
    --color-primary: #1B4332; /* Títulos, ícones principais, botão salvar. */
