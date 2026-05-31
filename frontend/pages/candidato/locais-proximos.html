@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Programa ARCA – Locais de Apoio Próximos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../../assets/css/locais-proximos.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-brand">Programa ARCA</div>
+    <div class="nav-search">
+      <input type="text" placeholder="Buscar" class="nav-search-input"/>
+    </div>
+    <div class="nav-links">
+      <a href="#" class="nav-link active">Dashboard</a>
+      <a href="#" class="nav-link">Meus Pets</a>
+      <a href="#" class="nav-link">Solicitações</a>
+      <a href="#" class="nav-link">Denunciar</a>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+      <span class="breadcrumb-item">Dashboard</span>
+      <span class="breadcrumb-sep">›</span>
+      <span class="breadcrumb-item active">Local de Apoio Próximos</span>
+    </div>
+
+    <h1 class="page-title">Locais de Apoio Próximos</h1>
+    <p class="page-subtitle">Encontre clínicas, abrigos, ONGs e outros serviços de apoio para animais perto de você</p>
+
+    <!-- SEARCH CARD -->
+    <div class="search-card">
+      <label class="search-label">Buscar Locais</label>
+      <div class="search-row">
+        <input type="text" class="search-address" placeholder="Digite seu endereço ou localização"/>
+        <button class="btn-buscar">Buscar</button>
+      </div>
+      <div class="filters-row">
+        <select class="filter-select">
+          <option>Todos os tipos</option>
+          <option>Clínica Veterinária</option>
+          <option>Abrigo</option>
+          <option>ONG</option>
+        </select>
+        <select class="filter-select">
+          <option>até 10 km</option>
+          <option>até 5 km</option>
+          <option>até 20 km</option>
+          <option>até 50 km</option>
+        </select>
+        <select class="filter-select">
+          <option>3+ estrelas</option>
+          <option>4+ estrelas</option>
+          <option>5 estrelas</option>
+        </select>
+        <button class="btn-limpar">Limpar Filtros</button>
+      </div>
+    </div>
+
+    <!-- RESULTS COUNT -->
+    <p class="results-count">3 locais encontrados</p>
+
+    <!-- LOCATION CARDS -->
+
+    <!-- Card 1 -->
+    <div class="location-card">
+      <div class="card-header">
+        <div class="card-title-group">
+          <h2 class="card-name">Clínica Veterinária São Patas</h2>
+          <span class="badge badge-clinica">Clínica Veterinária</span>
+        </div>
+        <button class="btn-heart" aria-label="Favoritar">&#9825;</button>
+      </div>
+      <div class="card-info">
+        <span class="info-item">
+          <svg class="icon" viewBox="0 0 20 20"><circle cx="10" cy="8" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M10 2a6 6 0 0 1 6 6c0 4-6 10-6 10S4 12 4 8a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+          Rua das Flores, 123 – Centro
+        </span>
+        <span class="info-distance">2.3 km</span>
+        <span class="info-item">
+          <svg class="icon" viewBox="0 0 20 20"><path d="M6 2a1 1 0 0 0-1 1v1H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1V3a1 1 0 1 0-2 0v1H7V3a1 1 0 0 0-1-1z" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+          (11) 3456-7890
+        </span>
+        <span class="info-item">
+          <svg class="icon" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M10 6v4l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          08:00 – 20:00
+        </span>
+        <span class="info-rating rating-high">
+          ★ 4.8 <span class="rating-count">(156)</span>
+        </span>
+      </div>
+      <div class="card-actions">
+        <button class="btn-ligar">
+          <svg class="icon" viewBox="0 0 20 20"><path d="M3 4a1 1 0 0 1 1-1h2.5a1 1 0 0 1 .97.757l.75 3a1 1 0 0 1-.28.97l-1.2 1.2a11.05 11.05 0 0 0 4.333 4.333l1.2-1.2a1 1 0 0 1 .97-.28l3 .75A1 1 0 0 1 17 13.5V16a1 1 0 0 1-1 1C8.163 17 3 11.837 3 5V4z" stroke="currentColor" stroke-width="1.3" fill="none"/></svg>
+          Ligar
+        </button>
+        <button class="btn-mais-info">
+          <svg class="icon" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M10 9v5M10 7v.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          Mais Informações
+        </button>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="location-card">
+      <div class="card-header">
+        <div class="card-title-group">
+          <h2 class="card-name">Abrigo Amigos dos Animais</h2>
+          <span class="badge badge-abrigo">Abrigo</span>
+        </div>
+        <button class="btn-heart" aria-label="Favoritar">&#9825;</button>
+      </div>
+      <div class="card-info">
+        <span class="info-item">
+          <svg class="icon" viewBox="0 0 20 20"><circle cx="10" cy="8" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M10 2a6 6 0 0 1 6 6c0 4-6 10-6 10S4 12 4 8a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+          Av. Paulista, 1000 – Bela Vista
+        </span>
+        <span class="info-distance">5.1 km</span>
+        <span class="info-item">
+          <svg class="icon" viewBox="0 0 20 20"><path d="M6 2a1 1 0 0 0-1 1v1H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1V3a1 1 0 1 0-2 0v1H7V3a1 1 0 0 0-1-1z" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+          (11) 3234-5678
+        </span>
+        <span class="info-item">
+          <svg class="icon" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M10 6v4l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          09:00 – 18:00
+        </span>
+        <span class="info-rating rating-high">
+          ★ 4.5 <span class="rating-count">(89)</span>
+        </span>
+      </div>
+      <div class="card-actions">
+        <button class="btn-ligar">
+          <svg class="icon" viewBox="0 0 20 20"><path d="M3 4a1 1 0 0 1 1-1h2.5a1 1 0 0 1 .97.757l.75 3a1 1 0 0 1-.28.97l-1.2 1.2a11.05 11.05 0 0 0 4.333 4.333l1.2-1.2a1 1 0 0 1 .97-.28l3 .75A1 1 0 0 1 17 13.5V16a1 1 0 0 1-1 1C8.163 17 3 11.837 3 5V4z" stroke="currentColor" stroke-width="1.3" fill="none"/></svg>
+          Ligar
+        </button>
+        <button class="btn-mais-info">
+          <svg class="icon" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M10 9v5M10 7v.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          Mais Informações
+        </button>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="location-card">
+      <div class="card-header">
+        <div class="card-title-group">
+          <h2 class="card-name">ONG Proteção Animal Brasil</h2>
+          <span class="badge badge-ong">ONG</span>
+        </div>
+        <button class="btn-heart" aria-label="Favoritar">&#9825;</button>
+      </div>
+      <div class="card-info">
+        <span class="info-item">
+          <svg class="icon" viewBox="0 0 20 20"><circle cx="10" cy="8" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M10 2a6 6 0 0 1 6 6c0 4-6 10-6 10S4 12 4 8a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+          Rua do Comércio, 456 – Vila Mariana
+        </span>
+        <span class="info-distance">3.7 km</span>
+        <span class="info-item">
+          <svg class="icon" viewBox="0 0 20 20"><path d="M6 2a1 1 0 0 0-1 1v1H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1V3a1 1 0 1 0-2 0v1H7V3a1 1 0 0 0-1-1z" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+          (11) 3567-8901
+        </span>
+        <span class="info-item">
+          <svg class="icon" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M10 6v4l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          10:00 – 19:00
+        </span>
+        <span class="info-rating rating-medium">
+          ★ 4.6 <span class="rating-count">(124)</span>
+        </span>
+      </div>
+      <div class="card-actions">
+        <button class="btn-ligar">
+          <svg class="icon" viewBox="0 0 20 20"><path d="M3 4a1 1 0 0 1 1-1h2.5a1 1 0 0 1 .97.757l.75 3a1 1 0 0 1-.28.97l-1.2 1.2a11.05 11.05 0 0 0 4.333 4.333l1.2-1.2a1 1 0 0 1 .97-.28l3 .75A1 1 0 0 1 17 13.5V16a1 1 0 0 1-1 1C8.163 17 3 11.837 3 5V4z" stroke="currentColor" stroke-width="1.3" fill="none"/></svg>
+          Ligar
+        </button>
+        <button class="btn-mais-info">
+          <svg class="icon" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M10 9v5M10 7v.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          Mais Informações
+        </button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <a href="#" class="footer-link">&#10003; Ajuda</a>
+    <a href="#" class="footer-link">&#10003; Privacidade</a>
+  </footer>
+
+</body>
+</html>

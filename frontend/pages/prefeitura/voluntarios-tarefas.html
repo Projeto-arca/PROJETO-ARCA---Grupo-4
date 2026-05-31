@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Programa ARCA – Voluntários e Tarefas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../../assets/css/voluntarios-tarefas.css"/>
+</head>
+<body>
+
+  
+  <nav class="navbar">
+    <div class="nav-brand">Programa Arca</div>
+    <div class="nav-search">
+      <input type="text" placeholder="Buscar voluntário ou tarefa" class="nav-search-input"/>
+    </div>
+    <div class="nav-dropdown">
+      <select class="nav-select">
+        <option>Gestão de Voluntários</option>
+        <option>Dashboard</option>
+        <option>Meus Pets</option>
+        <option>Solicitações</option>
+      </select>
+    </div>
+  </nav>
+
+  
+  <div class="layout">
+
+    
+    <aside class="sidebar">
+      <h2 class="sidebar-title">Voluntários</h2>
+      <input type="text" class="sidebar-search" placeholder="Buscar voluntário"/>
+
+      <div class="sidebar-tabs">
+        <button class="tab-btn active">Ativos</button>
+        <button class="tab-btn">Todos</button>
+      </div>
+
+      <ul class="volunteer-list">
+        <li class="volunteer-item">
+          <div class="avatar avatar-j">J</div>
+          <span class="volunteer-name">João Silva</span>
+          <span class="status-badge status-ativo">Ativo</span>
+        </li>
+        <li class="volunteer-item">
+          <div class="avatar avatar-m">M</div>
+          <span class="volunteer-name">Maria Oliveira</span>
+          <span class="status-badge status-ocupado">Ocupado</span>
+        </li>
+        <li class="volunteer-item">
+          <div class="avatar avatar-p">P</div>
+          <span class="volunteer-name">Pedro Souza</span>
+          <span class="status-badge status-indisponivel">Indisponível</span>
+        </li>
+      </ul>
+    </aside>
+
+    
+    <main class="main">
+
+      
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Tarefas</h2>
+          <button class="btn-nova-tarefa">Nova tarefa</button>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="task-table">
+            <thead>
+              <tr>
+                <th>Tarefa</th>
+                <th>Responsável</th>
+                <th>Prioridade</th>
+                <th>Status</th>
+                <th>Data limite</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="task-name">Levar animal à clínica</td>
+                <td>João</td>
+                <td>Alta</td>
+                <td><span class="pill pill-andamento">Em andamento</span></td>
+                <td class="date-muted">Hoje</td>
+              </tr>
+              <tr>
+                <td class="task-name">Divulgar feira de adoção</td>
+                <td>Maria</td>
+                <td>Média</td>
+                <td><span class="pill pill-pendente">Pendente</span></td>
+                <td class="date-muted">Amanhã</td>
+              </tr>
+              <tr>
+                <td class="task-name">Organizar estoque de ração</td>
+                <td>Pedro</td>
+                <td>Baixa</td>
+                <td><span class="pill pill-concluido">Concluído</span></td>
+                <td class="date-muted">Ontem</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Minhas tarefas</h2>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="task-table">
+            <thead>
+              <tr>
+                <th>Tarefa</th>
+                <th>Prioridade</th>
+                <th>Status</th>
+                <th>Data limite</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="task-name">Revisar documentos de adoção</td>
+                <td>Alta</td>
+                <td><span class="pill pill-pendente">Pendente</span></td>
+                <td class="date-muted">Hoje</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  
+  <footer class="footer">
+    <a href="#" class="footer-link">&#10003; Ajuda</a>
+    <a href="#" class="footer-link">&#10003; Privacidade</a>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programa ARCA – Central de Solicitações</title>
+
+  <!-- Montserrat: todos os pesos -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+
+  <nav class="navbar">
+
+   
+    <a href="#" class="navbar__logo">Programa ARCA</a>
+
+  
+    <div class="navbar__busca-wrapper">
+      <input
+        type="text"
+        class="navbar__busca"
+        placeholder="Buscar animal ou voluntário por nome / ID"
+        aria-label="Buscar animal ou voluntário por nome ou ID"
+      />
+    </div>
+
+   
+    <div class="navbar__dropdown-wrapper">
+      <button class="navbar__dropdown-btn" id="btnDropNav" aria-haspopup="true">
+      
+        <span class="dropdown-arrow">&#8964;</span>
+      </button>
+      <ul class="navbar__dropdown-menu" id="dropNavMenu" role="menu">
+        <li><a href="#" role="menuitem">Todas as Solicitações</a></li>
+        <li><a href="#" role="menuitem">Nova Solicitação</a></li>
+        <li><a href="#" role="menuitem">Relatórios</a></li>
+      </ul>
+    </div>
+
+   
+    <button class="navbar__hamburger" id="btnMenu" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+ 
+  <div class="navbar__drawer" id="drawerMenu">
+    <ul>
+      <li><a href="#">🏠 Início</a></li>
+      <li><a href="#">🐾 Meus Pets</a></li>
+      <li><a href="#">📋 Solicitações</a></li>
+      <li><a href="#">🚩 Denunciar</a></li>
+    </ul>
+  </div>
+
+ 
+  <main class="main">
+
+   
+    <div class="painel">
+
+      
+      <div class="painel__header">
+        <h1 class="painel__titulo">Últimas Solicitações</h1>
+
+        <div class="painel__header-acoes">
+          <input
+            type="text"
+            class="painel__busca"
+            placeholder="Digite seu nome..."
+            aria-label="Buscar por nome"
+          />
+          <button class="btn-nova-solicitacao">+ Nova solicitação</button>
+        </div>
+      </div>
+
+      
+      <div class="abas" role="tablist" aria-label="Filtrar por status">
+        <button class="aba aba-ativa"  role="tab" aria-selected="true"  data-filtro="todos">Todos</button>
+        <button class="aba"            role="tab" aria-selected="false" data-filtro="pendente">Pendente</button>
+        <button class="aba"            role="tab" aria-selected="false" data-filtro="concluido">Concluído</button>
+        <button class="aba"            role="tab" aria-selected="false" data-filtro="urgente">Urgente</button>
+      </div>
+
+      
+      <div class="tabela-scroll">
+        <table class="tabela" id="tabelaSolicitacoes">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Animal</th>
+              <th>Serviço</th>
+              <th>Status</th>
+              <th>Última Atualização</th>
+              <th>Prioridade</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+
+           
+            <tr data-status="pendente" data-prioridade="urgente">
+              <td class="col-id">#0041</td>
+              <td class="col-animal">Bolinha</td>
+              <td class="col-servico">Transporte</td>
+              <td><span class="badge badge-pendente">Pendente</span></td>
+              <td class="col-data">24/05/2026</td>
+              <td><span class="badge badge-urgente">Urgente</span></td>
+              <td class="col-acoes">
+                <button class="btn-detalhes">Mais detalhes</button>
+                <button class="btn-tag" aria-label="Etiqueta">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+                    <line x1="7" y1="7" x2="7.01" y2="7"/>
+                  </svg>
+                </button>
+              </td>
+            </tr>
+
+            
+            <tr data-status="concluido" data-prioridade="concluido">
+              <td class="col-id">#0042</td>
+              <td class="col-animal">Pipoca</td>
+              <td class="col-servico">Resgate</td>
+              <td><span class="badge badge-concluido">Concluído</span></td>
+              <td class="col-data">22/04/2026</td>
+              <td><span class="badge badge-concluido">Concluído</span></td>
+              <td class="col-acoes">
+                <button class="btn-detalhes">Mais detalhes</button>
+                <button class="btn-tag" aria-label="Etiqueta">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+                    <line x1="7" y1="7" x2="7.01" y2="7"/>
+                  </svg>
+                </button>
+              </td>
+            </tr>
+
+            
+            <tr data-status="pendente" data-prioridade="normal">
+              <td class="col-id">#0040</td>
+              <td class="col-animal">Thor</td>
+              <td class="col-servico">Castração</td>
+              <td><span class="badge badge-pendente">Pendente</span></td>
+              <td class="col-data">20/05/2026</td>
+              <td><span class="badge badge-normal">Normal</span></td>
+              <td class="col-acoes">
+                <button class="btn-detalhes">Mais detalhes</button>
+                <button class="btn-tag" aria-label="Etiqueta">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+                    <line x1="7" y1="7" x2="7.01" y2="7"/>
+                  </svg>
+                </button>
+              </td>
+            </tr>
+
+            
+            <tr data-status="concluido" data-prioridade="concluido">
+              <td class="col-id">#0038</td>
+              <td class="col-animal">Luna</td>
+              <td class="col-servico">Atendimento</td>
+              <td><span class="badge badge-concluido">Concluído</span></td>
+              <td class="col-data">18/05/2026</td>
+              <td><span class="badge badge-concluido">Concluído</span></td>
+              <td class="col-acoes">
+                <button class="btn-detalhes">Mais detalhes</button>
+                <button class="btn-tag" aria-label="Etiqueta">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+                    <line x1="7" y1="7" x2="7.01" y2="7"/>
+                  </svg>
+                </button>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      
+      <p class="tabela-vazia">Não há mais solicitações.</p>
+
+      
+      <nav class="paginacao" aria-label="Paginação">
+        <button class="pag-btn pag-seta" aria-label="Página anterior">&#8249;</button>
+        <button class="pag-btn pag-ativo" aria-current="page">1</button>
+        <button class="pag-btn">2</button>
+        <button class="pag-btn">3</button>
+        <button class="pag-btn pag-ellipsis" disabled aria-hidden="true">...</button>
+        <button class="pag-btn">99</button>
+        <button class="pag-btn pag-seta" aria-label="Próxima página">&#8250;</button>
+      </nav>
+
+    </div>
+
+  </main>
+
+  
+  <script>
+    /* ── Hamburger ── */
+    const btnMenu = document.getElementById('btnMenu');
+    const drawer  = document.getElementById('drawerMenu');
+
+    btnMenu.addEventListener('click', () => {
+      const aberto = drawer.classList.toggle('open');
+      btnMenu.setAttribute('aria-expanded', String(aberto));
+    });
+
+    document.addEventListener('click', e => {
+      if (!drawer.contains(e.target) && !btnMenu.contains(e.target)) {
+        drawer.classList.remove('open');
+      }
+    });
+
+    
+    const btnDropNav  = document.getElementById('btnDropNav');
+    const dropNavMenu = document.getElementById('dropNavMenu');
+
+    btnDropNav.addEventListener('click', e => {
+      e.stopPropagation();
+      dropNavMenu.classList.toggle('open');
+    });
+
+    document.addEventListener('click', () => dropNavMenu.classList.remove('open'));
+
+    
+    const abas  = document.querySelectorAll('.aba');
+    const linhas = document.querySelectorAll('#tabelaSolicitacoes tbody tr');
+
+    abas.forEach(aba => {
+      aba.addEventListener('click', () => {
+        
+        abas.forEach(a => {
+          a.classList.remove('aba-ativa');
+          a.setAttribute('aria-selected', 'false');
+        });
+        aba.classList.add('aba-ativa');
+        aba.setAttribute('aria-selected', 'true');
+
+        const filtro = aba.dataset.filtro;
+
+        linhas.forEach(linha => {
+          if (filtro === 'todos') {
+            linha.style.display = '';
+            return;
+          }
+          
+          const status     = linha.dataset.status;
+          const prioridade = linha.dataset.prioridade;
+          const visivel    = status === filtro || prioridade === filtro;
+          linha.style.display = visivel ? '' : 'none';
+        });
+      });
+    });
+
+    
+    const pagBtns = document.querySelectorAll('.pag-btn:not(.pag-seta):not(.pag-ellipsis)');
+    pagBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        pagBtns.forEach(b => b.classList.remove('pag-ativo'));
+        btn.classList.add('pag-ativo');
+      });
+    });
+  </script>
+
+</body>
+</html>
