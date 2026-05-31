@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa Arca - Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/meuspets.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Programa Arca</div>
+        <div class="search-container">
+            <input type="text" placeholder="Buscar" class="global-search">
+        </div>
+        <nav class="nav-links">
+            <a href="#">Dashboard</a>
+            <a href="#" class="active">Meus Pets</a>
+            <a href="#">Solicitações</a>
+            <a href="#">Denunciar</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="left-column">
+            <div class="section-header">
+                <div class="title-wrapper">
+                    <h2>Seus pets</h2>
+                    <span class="badge">2</span>
+                </div>
+                <input type="text" id="petSearch" placeholder="Buscar pet por nome..." class="local-search">
+            </div>
+
+            <div class="pets-list" id="petsList">
+                <div class="card pet-card">
+                    <div class="pet-status-bar alert"></div>
+                    <div class="pet-image">
+                        <img src="../../assets/img/cao.png" alt="Bolinha - Pitbull">
+                    </div>
+                    <div class="pet-info">
+                        <div class="pet-header">
+                            <div class="pet-name">
+                                <span>Nome:</span>
+                                <h3>Bolinha</h3>
+                            </div>
+                            <button class="btn-outline">Ficha do Animal &rarr;</button>
+                        </div>
+                        
+                        <div class="status-badge health-good">
+                            <span class="dot"></span> Saudável
+                        </div>
+                        
+                        <div class="pet-details">
+                            <p>Data de nascimento <span class="detail-badge">10 / 07 / 2022</span></p>
+                            <p>Raça: Pitbull</p>
+                            <p>Sexo: Masculino</p>
+                        </div>
+                        
+                        <div class="status-badge vaccine-alert">
+                            &#9888; Vacina: 15/08/2026
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card pet-card">
+                    <div class="pet-status-bar good"></div>
+                    <div class="pet-image">
+                        <img src="../../assets/img/gato.png" alt="Mel - Siamês">
+                    </div>
+                    <div class="pet-info">
+                        <div class="pet-header">
+                            <div class="pet-name">
+                                <span>Nome:</span>
+                                <h3>Mel</h3>
+                            </div>
+                            <button class="btn-outline">Ficha do Animal &rarr;</button>
+                        </div>
+                        
+                        <div class="status-badge health-good">
+                            <span class="dot"></span> Saudável
+                        </div>
+                        
+                        <div class="pet-details">
+                            <p>Data de nascimento <span class="detail-badge">03 / 02 / 2021</span></p>
+                            <p>Raça: Siamês</p>
+                            <p>Sexo: Masculino</p>
+                        </div>
+                        
+                        <div class="status-badge vaccine-ok">
+                            &#10003; Vacinas em dia
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card stats-card">
+                <div class="stat-item">
+                    <h4>2</h4>
+                    <p>Pets<br>cadastrados</p>
+                </div>
+                <div class="divider"></div>
+                <div class="stat-item">
+                    <h4>1</h4>
+                    <p>Vacina<br>pendente</p>
+                </div>
+                <div class="divider"></div>
+                <div class="stat-item">
+                    <h4>0</h4>
+                    <p>Solicitações</p>
+                </div>
+            </div>
+        </section>
+
+        <aside class="right-column">
+            <div class="card add-pet-card">
+                <img src="../../assets/img/pets.png" alt="Grupo de Animais" class="group-image">
+                <h3>Cadastrar novo pet aqui</h3>
+                <button class="btn-primary">+ Adicionar pet</button>
+            </div>
+
+            <div class="card info-card">
+                <div class="icon-circle">
+                    &#128161; </div>
+                <div class="info-text">
+                    <h4>Mantenha os dados atualizados!</h4>
+                    <p>Pets com fichas completas têm acesso prioritário a atendimentos e castrações. Adicione foto, microchip e vacinas.</p>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <a href="#">Ajuda</a>
+        <a href="#">Privacidade</a>
+    </footer>
+
+    <script src="./meuspets.js"></script>
+</body>
+</html>
