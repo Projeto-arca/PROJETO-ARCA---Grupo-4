@@ -2,29 +2,34 @@
 
   /* CSS GLOBAL */
 
-:root { 
- /* Cores Principais */
-   --color-primary: #1B4332; /* Títulos, ícones principais, botão salvar. */
-   --color-primary-mid: #2D6A4F;  /*  botão principal */
-   --color-primary-light:#D8F3DC;   /* badge de status "Castrado" */
+:root {
+  /* Verde Principal — header, botões primários */
+  --color-primary:       #1B4D3E;
+  /* Verde Secundário — hover, ícones */
+  --color-primary-mid:   #2D7A5F;
+  /* Menta Claro — fundos suaves, badges verdes */
+  --color-primary-light: #E8F5F0;
+  /* Menta/Accent — destaques */
+  --color-accent:        #A8DBC8;
 
- /* Cores Neutras */
-    --color-border:#ADB5BD; /*  bordas e textos secundários */
-   --color-bg:#F8F9FA;   /* fundos das páginas */
+  /* Neutras */
+  --color-border: #D4D4D4;
+  --color-bg:     #F7F6F2;  /* fundo geral — do moodboard */
 
- /* Status */  
-  --color-error:          #E53935; /* cancelar / animal em estado grave */
-  --color-success:        #388E3C; /* salvar / castração realizada / resgate finalizado */
-  --color-warning:        #F9A825; /* em andamento */
-  --color-pending:        #EF6C00; /* pendente / atenção */
-  --color-info:           #0288D1; /* informativo */
+  /* Status */
+  --color-error:   #C0392B;
+  --color-success: #388E3C;
+  --color-warning: #E5A44A;
+  --color-info:    #1F77B4;
 
   /* Texto */
-  --color-text:       #212529; /* cor padrão do texto */
-  --color-text-muted: #6C757D; /* textos secundários / placeholders */
+  --color-text:       #212529;
+  --color-text-muted: #6C757D;
 
- /* Tipografia */
-  --font-main: 'Inter', 'Montserrat', sans-serif; /* Font Principal, mudar o size de acordo com o style guide */
+  /* Tipografia */
+  --font-heading: 'Montserrat', sans-serif;  /* títulos */
+  --font-main:    'Inter', sans-serif;       /* corpo e UI */
+
 
  /* Grid */
   --grid-landing: 1170px;
