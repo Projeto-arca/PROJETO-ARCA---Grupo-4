@@ -1,0 +1,416 @@
+/* =============================================
+   PROGRAMA ARCA – Voluntários e Tarefas
+   Fonte: Montserrat (Google Fonts)
+============================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --green-dark:      #1e3a2f;
+  --green-nav:       #2d4a3e;
+  --green-btn:       #2d4a3e;
+  --green-btn-hover: #1e3a2f;
+  --green-avatar-j:  #2d4a3e;
+  --green-avatar-m:  #3a6b55;
+  --green-avatar-p:  #4e8a6e;
+
+  --status-ativo-color:        #2a8c5e;
+  --status-ocupado-color:      #c97a1a;
+  --status-indisponivel-color: #8a8a8a;
+
+  --pill-andamento-bg:    #fff3e0;
+  --pill-andamento-color: #d17a10;
+  --pill-andamento-border:#e8a045;
+
+  --pill-pendente-bg:    #fff4e0;
+  --pill-pendente-color: #c97a1a;
+  --pill-pendente-border:#e8a045;
+
+  --pill-concluido-bg:    #e6f4ee;
+  --pill-concluido-color: #1e7a50;
+  --pill-concluido-border:#6dbc99;
+
+  --text-primary:   #1a2e25;
+  --text-secondary: #4a5e55;
+  --text-muted:     #8a9e95;
+  --border:         #dde8e3;
+  --bg-page:        #f4f7f5;
+  --bg-card:        #ffffff;
+  --shadow-card:    0 1px 4px rgba(0,0,0,0.07);
+  --radius-card:    10px;
+  --font: 'Montserrat', sans-serif;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg-page);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── NAVBAR ── */
+.navbar {
+  background: var(--green-nav);
+  display: flex;
+  align-items: center;
+  padding: 0 28px;
+  height: 56px;
+  gap: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-brand {
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.97rem;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.nav-search {
+  flex: 1;
+  max-width: 500px;
+}
+
+.nav-search-input {
+  width: 100%;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  font-family: var(--font);
+  font-size: 0.83rem;
+  outline: none;
+  background: #fff;
+  color: var(--text-primary);
+}
+
+.nav-search-input::placeholder { color: #aab5b0; }
+
+.nav-dropdown {
+  margin-left: auto;
+}
+
+.nav-select {
+  background: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-family: var(--font);
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+  outline: none;
+  appearance: auto;
+  min-width: 190px;
+}
+
+/* ── LAYOUT ── */
+.layout {
+  display: flex;
+  flex: 1;
+  gap: 0;
+  padding: 28px 28px 0;
+  align-items: flex-start;
+}
+
+/* ── SIDEBAR ── */
+.sidebar {
+  width: 230px;
+  flex-shrink: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 20px 18px 28px;
+  box-shadow: var(--shadow-card);
+  margin-right: 24px;
+}
+
+.sidebar-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+}
+
+.sidebar-search {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: var(--font);
+  font-size: 0.79rem;
+  color: var(--text-primary);
+  outline: none;
+  margin-bottom: 14px;
+  transition: border-color 0.18s;
+}
+
+.sidebar-search::placeholder { color: #b0bdb8; }
+.sidebar-search:focus { border-color: var(--green-btn); }
+
+/* Tabs */
+.sidebar-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 7px 0;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: transparent;
+  font-family: var(--font);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background 0.16s, color 0.16s, border-color 0.16s;
+}
+
+.tab-btn.active {
+  background: var(--green-btn);
+  color: #fff;
+  border-color: var(--green-btn);
+}
+
+.tab-btn:not(.active):hover {
+  border-color: var(--green-btn);
+  color: var(--green-btn);
+}
+
+/* Volunteer list */
+.volunteer-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.volunteer-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 6px;
+  border-radius: 7px;
+  transition: background 0.15s;
+  cursor: pointer;
+}
+
+.volunteer-item:hover {
+  background: #f0f5f2;
+}
+
+/* Avatar */
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.avatar-j { background: var(--green-avatar-j); }
+.avatar-m { background: var(--green-avatar-m); }
+.avatar-p { background: var(--green-avatar-p); }
+
+.volunteer-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  flex: 1;
+}
+
+/* Status badges (sidebar) */
+.status-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.status-ativo       { color: var(--status-ativo-color); }
+.status-ocupado     { color: var(--status-ocupado-color); }
+.status-indisponivel{ color: var(--status-indisponivel-color); }
+
+/* ── MAIN ── */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+
+/* Section */
+.section {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 20px 22px 6px;
+  box-shadow: var(--shadow-card);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.btn-nova-tarefa {
+  background: var(--green-btn);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 9px 20px;
+  font-family: var(--font);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  transition: background 0.18s;
+}
+
+.btn-nova-tarefa:hover {
+  background: var(--green-btn-hover);
+}
+
+/* Table */
+.table-wrapper {
+  overflow-x: auto;
+  margin: 0 -22px;
+}
+
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.task-table thead tr {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: #f9faf9;
+}
+
+.task-table th {
+  padding: 10px 22px;
+  text-align: left;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.task-table tbody tr {
+  border-bottom: 1px solid var(--border);
+  transition: background 0.14s;
+}
+
+.task-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.task-table tbody tr:hover {
+  background: #f7faf8;
+}
+
+.task-table td {
+  padding: 13px 22px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  vertical-align: middle;
+}
+
+.task-name {
+  color: var(--text-primary) !important;
+  font-weight: 600 !important;
+}
+
+.date-muted {
+  color: var(--text-muted) !important;
+  font-weight: 500 !important;
+}
+
+/* Status pills */
+.pill {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-size: 0.73rem;
+  font-weight: 700;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.pill-andamento {
+  background: var(--pill-andamento-bg);
+  color: var(--pill-andamento-color);
+  border-color: var(--pill-andamento-border);
+}
+
+.pill-pendente {
+  background: var(--pill-pendente-bg);
+  color: var(--pill-pendente-color);
+  border-color: var(--pill-pendente-border);
+}
+
+.pill-concluido {
+  background: var(--pill-concluido-bg);
+  color: var(--pill-concluido-color);
+  border-color: var(--pill-concluido-border);
+}
+
+/* ── FOOTER ── */
+.footer {
+  background: var(--bg-page);
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 20px;
+  padding: 14px 28px;
+  margin-top: 28px;
+}
+
+.footer-link {
+  font-size: 0.77rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.footer-link:hover {
+  color: var(--green-btn);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 680px) {
+  .layout { flex-direction: column; padding: 16px 12px 0; }
+  .sidebar { width: 100%; margin-right: 0; margin-bottom: 18px; }
+  .navbar { padding: 0 14px; gap: 10px; }
+  .nav-search { max-width: 160px; }
+  .nav-select { min-width: 140px; }
+}
