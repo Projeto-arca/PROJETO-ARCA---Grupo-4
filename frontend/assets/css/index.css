@@ -122,14 +122,14 @@ input::placeholder {
     padding-top: 1em;
 }
 
-/* ========== TABLET (até 1024px) ========== */
+
 @media (max-width: 1024px) {
     .coluna-esquerda {
         width: 40%;
     }
 }
 
-/* ========== CELULAR (até 768px) ========== */
+
 @media (max-width: 768px) {
     .pagina-login {
         flex-direction: column;
