@@ -145,7 +145,6 @@ body {
     color: var(--text-dark);
 }
 
-/* Status */
 .status-badge {
     display: inline-flex;
     align-items: center;
@@ -169,7 +168,6 @@ body {
     border-radius: 50%;
 }
 
-/* Resumo do animal */
 .animal-summary {
     display: flex;
     align-items: center;
@@ -205,7 +203,6 @@ body {
     color: var(--text-dark);
 }
 
-/* Abas */
 .record-tabs {
     display: flex;
     align-items: center;
@@ -229,7 +226,6 @@ body {
     border-bottom-color: var(--primary-green);
 }
 
-/* Formulário */
 .animal-form {
     display: flex;
     flex-direction: column;
@@ -284,7 +280,6 @@ body {
     font-weight: 600;
 }
 
-/* Botões */
 .form-actions {
     display: flex;
     justify-content: flex-end;
@@ -329,7 +324,6 @@ body {
     box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.14);
 }
 
-/* Rodapé */
 footer {
     max-width: 1100px;
     margin: 0 auto;

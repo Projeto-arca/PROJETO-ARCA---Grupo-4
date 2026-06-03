@@ -1,37 +1,25 @@
 @charset "UTF-8";
 
-  /* CSS GLOBAL */
-
 :root {
-  /* Verde Principal — header, botões primários */
   --color-primary:       #1B4D3E;
-  /* Verde Secundário — hover, ícones */
   --color-primary-mid:   #2D7A5F;
-  /* Menta Claro — fundos suaves, badges verdes */
   --color-primary-light: #E8F5F0;
-  /* Menta/Accent — destaques */
   --color-accent:        #A8DBC8;
 
-  /* Neutras */
   --color-border: #D4D4D4;
-  --color-bg:     #F7F6F2;  /* fundo geral — do moodboard */
+  --color-bg:     #F7F6F2;
 
-  /* Status */
   --color-error:   #C0392B;
   --color-success: #388E3C;
   --color-warning: #E5A44A;
   --color-info:    #1F77B4;
 
-  /* Texto */
   --color-text:       #212529;
   --color-text-muted: #6C757D;
 
-  /* Tipografia */
-  --font-heading: 'Montserrat', sans-serif;  /* títulos */
-  --font-main:    'Inter', sans-serif;       /* corpo e UI */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-main:    'Inter', sans-serif;
 
-
- /* Grid */
   --grid-landing: 1170px;
   --grid-portal:  1100px;
 }

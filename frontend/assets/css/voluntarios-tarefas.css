@@ -290,7 +290,6 @@ body {
   background: var(--green-btn-hover);
 }
 
-/* Table */
 .table-wrapper {
   overflow-x: auto;
   margin: 0 -22px;
@@ -400,7 +399,6 @@ body {
   color: var(--green-btn);
 }
 
-/* ── RESPONSIVE ── */
 @media (max-width: 680px) {
   .layout { flex-direction: column; padding: 16px 12px 0; }
   .sidebar { width: 100%; margin-right: 0; margin-bottom: 18px; }
