@@ -1,7 +1,4 @@
-/* =============================================
-   PROGRAMA ARCA – Locais de Apoio Próximos
-   Fonte: Montserrat (Google Fonts)
-============================================= */
+
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -44,7 +41,7 @@ body {
   flex-direction: column;
 }
 
-/* ── NAVBAR ── */
+
 .navbar {
   background: var(--green-nav);
   display: flex;
@@ -113,7 +110,7 @@ body {
   font-weight: 700;
 }
 
-/* ── MAIN ── */
+
 .main {
   flex: 1;
   max-width: 960px;
@@ -122,7 +119,7 @@ body {
   padding: 28px 24px 40px;
 }
 
-/* ── BREADCRUMB ── */
+
 .breadcrumb {
   display: flex;
   align-items: center;
@@ -146,7 +143,7 @@ body {
   font-size: 0.85rem;
 }
 
-/* ── PAGE TITLE ── */
+
 .page-title {
   font-size: 1.55rem;
   font-weight: 800;
@@ -162,7 +159,7 @@ body {
   font-weight: 400;
 }
 
-/* ── SEARCH CARD ── */
+
 .search-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -227,7 +224,7 @@ body {
   background: var(--green-btn-hover);
 }
 
-/* ── FILTERS ── */
+
 .filters-row {
   display: flex;
   gap: 10px;
@@ -273,7 +270,7 @@ body {
   color: var(--green-btn);
 }
 
-/* ── RESULTS COUNT ── */
+
 .results-count {
   font-size: 0.81rem;
   font-weight: 600;
@@ -281,7 +278,7 @@ body {
   margin-bottom: 14px;
 }
 
-/* ── LOCATION CARD ── */
+
 .location-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -296,7 +293,7 @@ body {
   box-shadow: var(--shadow-card-hover);
 }
 
-/* Card header */
+
 .card-header {
   display: flex;
   align-items: center;
@@ -318,7 +315,7 @@ body {
   letter-spacing: -0.01em;
 }
 
-/* Badges */
+
 .badge {
   display: inline-block;
   padding: 3px 12px;
@@ -343,7 +340,7 @@ body {
   color: #5a3d9e;
 }
 
-/* Heart button */
+
 .btn-heart {
   background: none;
   border: none;
@@ -361,7 +358,7 @@ body {
   color: #e05c6a;
 }
 
-/* Card info row */
+
 .card-info {
   display: flex;
   align-items: center;
@@ -411,7 +408,7 @@ body {
   color: var(--text-muted);
 }
 
-/* Card actions */
+
 .card-actions {
   display: flex;
   gap: 0;
@@ -464,7 +461,7 @@ body {
   color: inherit;
 }
 
-/* ── FOOTER ── */
+
 .footer {
   background: var(--bg-page);
   border-top: 1px solid var(--border);
@@ -486,7 +483,7 @@ body {
   color: var(--green-btn);
 }
 
-/* ── RESPONSIVE ── */
+
 @media (max-width: 680px) {
   .navbar {
     padding: 0 16px;
