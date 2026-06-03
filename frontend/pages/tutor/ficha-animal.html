@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa Arca | Ficha do Animal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/ficha-animal.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="#" class="logo">Programa Arca</a>
+
+        <div class="search-container">
+            <label for="busca-geral" class="sr-only">Buscar no sistema</label>
+            <input type="search" id="busca-geral" class="global-search" placeholder="Buscar animal, tutor ou solicitação">
+        </div>
+
+        <nav class="nav-links" aria-label="Navegação principal">
+            <a href="#">Central de Solicitações</a>
+            <a href="#">Dashboard</a>
+            <a href="#">Gestão de Voluntários</a>
+        </nav>
+
+        <label for="menu-usuario" class="sr-only">Menu do usuário</label>
+        <select id="menu-usuario" class="user-select" aria-label="Menu do usuário">
+            <option>Sair</option>
+            <option>Perfil</option>
+            <option>Configurações</option>
+        </select>
+    </header>
+
+    <main class="animal-page">
+        <section class="animal-record card" aria-labelledby="titulo-ficha">
+            <div class="record-heading">
+                <div>
+                    <p class="eyebrow">Carteirinha digital do Pet</p>
+                    <h1 id="titulo-ficha">Ficha do Animal</h1>
+                </div>
+
+                <span class="status-badge health-good">
+                    <span class="dot"></span>
+                    Em tratamento
+                </span>
+            </div>
+
+            <section class="animal-summary" aria-label="Resumo do animal">
+                <div class="animal-photo" aria-hidden="true">
+                    <span>🐾</span>
+                </div>
+
+                <div class="animal-main-info">
+                    <h2>Nome do Animal</h2>
+                    <p><strong>Status:</strong> Em tratamento</p>
+                    <p><strong>Responsável:</strong> DD/MM/AAAA</p>
+                    <p><strong>Localização:</strong> Endereço do Resgate</p>
+                </div>
+            </section>
+
+            <nav class="record-tabs" aria-label="Seções da ficha">
+                <a href="#informacoes" class="active">Informações</a>
+                <a href="#historico">Histórico</a>
+                <a href="#gastos">Gastos</a>
+                <a href="#prontuario">Prontuário</a>
+            </nav>
+
+            <form class="animal-form" id="informacoes">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="idade">Idade</label>
+                        <input type="text" id="idade" name="idade" value="2 anos">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sexo">Sexo</label>
+                        <input type="text" id="sexo" name="sexo" value="Macho">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="porte">Porte</label>
+                        <input type="text" id="porte" name="porte" value="Médio">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="especie">Espécie</label>
+                        <input type="text" id="especie" name="especie" value="Cachorro">
+                    </div>
+                </div>
+
+                <div class="form-group observations-group">
+                    <label for="observacoes">Observações</label>
+                    <textarea id="observacoes" name="observacoes" rows="6">Animal apresentou infestação de carrapatos
+Início tratamento em DD/MM/AAAA</textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-outline">Cancelar</button>
+                    <button type="submit" class="btn-primary">Salvar alterações</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#">Ajuda</a>
+        <a href="#">Privacidade</a>
+    </footer>
+</body>
+</html>

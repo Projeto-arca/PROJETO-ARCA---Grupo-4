@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa Arca - Dashboard Tutor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/dashtutor.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Programa Arca</div>
+        <div class="search-container">
+            <input type="text" placeholder="Buscar" class="global-search">
+        </div>
+        <nav class="nav-links">
+            <a href="#" class="active">Dashboard</a>
+            <a href="#">Meus Pets</a>
+            <a href="#">Solicitações</a>
+            <a href="#">Denunciar</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <section class="top-cards-grid">
+            
+            <div class="card welcome-card">
+                <div class="profile-avatar">
+                    <div class="avatar-circle">&#128105;</div> 
+                </div>
+                <div class="welcome-text">
+                    <p class="greeting">Bem-vinda de volta,</p>
+                    <h2>Márcia!</h2>
+                    <div class="badge-pets">
+                        <span class="dot"></span> 1 cão e 1 gata
+                    </div>
+                </div>
+            </div>
+
+            <div class="card status-card">
+                <div class="card-header">
+                    <span class="icon">&#128193;</span> Status das Solicitações
+                </div>
+                <div class="status-content">
+                    <div class="status-icon">&#128194;</div>
+                    <h3>0</h3>
+                    <p>Pedidos em andamento</p>
+                    <button class="btn-dark">Ver status &rsaquo;</button>
+                </div>
+            </div>
+
+            <div class="card id-card">
+                <div class="card-header">
+                    <span class="icon">&#128179;</span> Carteirinha digital
+                </div>
+                <div class="status-content">
+                    <div class="status-icon">&#12968;</div>
+                    <p class="id-desc">Verifique a carteirinha de seus pets</p>
+                    <button class="btn-dark">Acessar &rsaquo;</button>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="middle-section">
+            
+            <div class="register-banner">
+                <div class="banner-content">
+                    <h2>Cadastre seus pets</h2>
+                    <p>Ajude a proteger e dar visibilidade aos animais que você ama!</p>
+                    <button class="btn-light"><span class="icon">&#128062;</span> Cadastrar pets</button>
+                </div>
+                <div class="banner-image">
+                    <div class="image-placeholder">Pets</div>
+                </div>
+            </div>
+
+            <div class="action-list">
+                
+                <a href="#" class="action-card">
+                    <div class="action-icon whatsapp-icon">&#128222;</div>
+                    <div class="action-text">
+                        <h4>Status das Solicitações</h4>
+                        <p>Fale conosco de forma rápida e prática.</p>
+                    </div>
+                    <div class="arrow">&rsaquo;</div>
+                </a>
+
+                <a href="#" class="action-card">
+                    <div class="action-icon camera-icon">&#128247;</div>
+                    <div class="action-text">
+                        <h4>Adicionar atalho</h4>
+                        <p>Adicione atalhos para acessar mais rápido.</p>
+                    </div>
+                    <div class="arrow">&rsaquo;</div>
+                </a>
+
+            </div>
+        </section>
+
+        <section class="bottom-section">
+            <a href="#" class="location-banner">
+                <div class="location-image">
+                    <div class="map-icon">&#128205;</div>
+                </div>
+                <div class="location-text">
+                    <h3>Locais de apoio próximos</h3>
+                    <p>Encontre clínicas, ONGs e pontos de apoio perto de você!</p>
+                </div>
+                <div class="arrow">&rsaquo;</div>
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <a href="#"><span>&#63;</span> Ajuda</a>
+        <a href="#"><span>&#128274;</span> Privacidade</a>
+    </footer>
+
+    <script src="../../assets/js/dashtutor.js"></script>
+</body>
+</html>
