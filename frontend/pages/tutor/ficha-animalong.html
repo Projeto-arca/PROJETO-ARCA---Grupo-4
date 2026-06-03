@@ -7,30 +7,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/ficha-animal.css">
+    <link rel="stylesheet" href="../../assets/css/dashboardONG.css">
+    <script src="../../assets/js/dashboardONG.js"></script>
 </head>
 <body>
-    <header class="navbar">
-        <a href="#" class="logo">Programa Arca</a>
-
-        <div class="search-container">
-            <label for="busca-geral" class="sr-only">Buscar no sistema</label>
-            <input type="search" id="busca-geral" class="global-search" placeholder="Buscar animal, tutor ou solicitação">
+    <nav class="barra-navegacao">
+        <span class="barra-logo">Programa Arca</span>
+        <input class="barra-busca" type="search" placeholder="Buscar animal ou voluntário por nome / ID">
+        <div class="menu-usuario">
+            <button class="barra-botao-usuario" onclick="alternarMenu()">Ficha do Animal &#8964;</button>
+            <div class="menu-dropdown" id="menu-dropdown">
+                <a href="../../../index.html">Sair</a>
+                <a href="../ong/dashboardOng.html">Dashboard</a>
+                <a href="../ong/solicitacoesONG.html">Central de Solicitações</a>
+                <a href="ficha-animalong.html" class="menu-item-ativo">Ficha do Animal</a>
+                <a href="../prefeitura/voluntarios-tarefasOng.html">Gestão de Voluntários</a>
+            </div>
         </div>
-
-        <nav class="nav-links" aria-label="Navegação principal">
-            <a href="#">Central de Solicitações</a>
-            <a href="#">Dashboard</a>
-            <a href="#">Gestão de Voluntários</a>
-        </nav>
-
-        <label for="menu-usuario" class="sr-only">Menu do usuário</label>
-        <select id="menu-usuario" class="user-select" aria-label="Menu do usuário">
-            <option>Sair</option>
-            <option>Perfil</option>
-            <option>Configurações</option>
-        </select>
-    </header>
+    </nav>
 
     <main class="animal-page">
         <section class="animal-record card" aria-labelledby="titulo-ficha">

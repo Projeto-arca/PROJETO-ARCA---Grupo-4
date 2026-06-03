@@ -16,11 +16,12 @@
       <input type="text" placeholder="Buscar voluntário ou tarefa" class="nav-search-input"/>
     </div>
     <div class="nav-dropdown">
-      <select class="nav-select">
-        <option>Gestão de Voluntários</option>
-        <option>Dashboard</option>
-        <option>Meus Pets</option>
-        <option>Solicitações</option>
+      <select class="nav-select" onchange="window.location.href=this.value">
+        <option value="">Gestão de Voluntários</option>
+        <option value="../../../index.html">Sair</option>
+        <option value="../ong/dashboardOng.html">Dashboard</option>
+         <option value="../ong/solicitacoesONG.html">Central de Solicitações</option>
+        <option value="../tutor/ficha-animalong.html">Ficha do Animal</option>
       </select>
     </div>
   </nav>

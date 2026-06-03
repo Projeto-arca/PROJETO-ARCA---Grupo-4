@@ -344,6 +344,7 @@ body {
     padding: 24px 32px;
     display: flex;
     align-items: center;
+    cursor: pointer;
     gap: 24px;
     text-decoration: none;
     color: inherit;
