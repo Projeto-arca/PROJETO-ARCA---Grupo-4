@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard — Programa Arca</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dashboardONG.css">
+    <script src="../../assets/js/dashboardONG.js"></script>
+</head>
+<body>
+
+    <nav class="barra-navegacao">
+        <span class="barra-logo">Programa Arca</span>
+        <input class="barra-busca" type="search" placeholder="Buscar animal ou voluntário por nome / ID">
+        <div class="menu-usuario">
+            <button class="barra-botao-usuario" onclick="alternarMenu()">Dashboard &#8964;</button>
+            <div class="menu-dropdown" id="menu-dropdown">
+                <a href="../../../index.html">Sair</a>
+                <a href="dashboard.html" class="menu-item-ativo">Dashboard</a>
+                <a href="../ong/solicitacoes.html">Central de Solicitações</a>
+                <a href="../ong/ficha-animal.html">Ficha do Animal</a>
+                <a href="../ong/gestao-voluntarios.html">Gestão de Voluntários</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="conteudo-principal">
+
+        <section class="secao-visao-geral">
+            <h2 class="titulo-secao">Visão geral do mês</h2>
+
+            <div class="grade-cartoes">
+
+                <div class="cartao-metrica">
+                    <p class="cartao-metrica__titulo">Resgates do mês</p>
+                    <p class="cartao-metrica__valor">47</p>
+                    <p class="cartao-metrica__descricao">Custo médio acumulado</p>
+                    <span class="etiqueta etiqueta--sucesso">R$ 3.240 total</span>
+                </div>
+
+                <div class="cartao-metrica">
+                    <p class="cartao-metrica__titulo">Saúde do plantel</p>
+                    <p class="cartao-metrica__valor">12 <span class="cartao-metrica__valor--secundario">/ 38</span></p>
+                    <p class="cartao-metrica__descricao">Em tratamento vs. prontos</p>
+                    <span class="etiqueta etiqueta--atencao">12 em tratamento</span>
+                </div>
+
+                <div class="cartao-metrica">
+                    <p class="cartao-metrica__titulo">Próximas castrações</p>
+                    <p class="cartao-metrica__valor">5</p>
+                    <p class="cartao-metrica__descricao">Eventos agendados na semana</p>
+                    <span class="etiqueta etiqueta--sucesso">Próximo: quinta-feira</span>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="secao-solicitacoes">
+            <h2 class="titulo-secao">Solicitações ativas</h2>
+
+            <div class="painel-solicitacoes">
+
+                <div class="cabecalho-solicitacoes">
+                    <div class="grupo-filtros">
+                        <button class="botao-filtro ativo">Todos</button>
+                        <button class="botao-filtro">Transporte</button>
+                        <button class="botao-filtro">Castração</button>
+                        <button class="botao-filtro">Atendimento</button>
+                    </div>
+                </div>
+
+                <table class="tabela-solicitacoes">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Animal</th>
+                            <th>Tipo de serviço</th>
+                            <th>Status</th>
+                            <th>Última atualização</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#0041</td>
+                            <td>Bolinha</td>
+                            <td>Transporte</td>
+                            <td><span class="etiqueta etiqueta--pendente">A caminho</span></td>
+                            <td>Hoje, 09:12</td>
+                        </tr>
+                        <tr>
+                            <td>#0039</td>
+                            <td>Mel</td>
+                            <td>Castração</td>
+                            <td><span class="etiqueta etiqueta--sucesso">Confirmado</span></td>
+                            <td>Hoje, 08:47</td>
+                        </tr>
+                        <tr>
+                            <td>#0037</td>
+                            <td>Tobias</td>
+                            <td>Atendimento</td>
+                            <td><span class="etiqueta etiqueta--atencao">Aguardando</span></td>
+                            <td>Ontem, 17:30</td>
+                        </tr>
+                        <tr>
+                            <td>#0034</td>
+                            <td>Fifi</td>
+                            <td>Transporte</td>
+                            <td><span class="etiqueta etiqueta--neutro">Concluído</span></td>
+                            <td>Ontem, 14:05</td>
+                        </tr>
+                        <tr>
+                            <td>#0033</td>
+                            <td>Luna</td>
+                            <td>Castração</td>
+                            <td><span class="etiqueta etiqueta--pendente">A caminho</span></td>
+                            <td>Ontem, 11:22</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <a href="#">&#10003; Ajuda</a>
+        <a href="#">&#9679; Privacidade</a>
+    </footer>
+
+</body>
+</html>
