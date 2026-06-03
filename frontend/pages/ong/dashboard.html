@@ -7,13 +7,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/dashboardONG.css">
+    <script src="../../assets/js/dashboardONG.js"></script>
 </head>
 <body>
 
     <nav class="barra-navegacao">
         <span class="barra-logo">Programa Arca</span>
         <input class="barra-busca" type="search" placeholder="Buscar animal ou voluntário por nome / ID">
-        <button class="barra-botao-usuario">Dashboard &#8964;</button>
+        <div class="menu-usuario">
+            <button class="barra-botao-usuario" onclick="alternarMenu()">Dashboard &#8964;</button>
+            <div class="menu-dropdown" id="menu-dropdown">
+                <a href="../../../index.html">Login</a>
+                <a href="dashboard.html" class="menu-item-ativo">Dashboard ONG</a>
+                <a href="../ong/solicitacoes.html">Central de Solicitações</a>
+                <a href="../ong/ficha-animal.html">Ficha do Animal</a>
+                <a href="../ong/gestao-voluntarios.html">Gestão de Voluntários</a>
+            </div>
+        </div>
     </nav>
 
     <main class="conteudo-principal">
@@ -53,12 +63,11 @@
             <div class="painel-solicitacoes">
 
                 <div class="cabecalho-solicitacoes">
-                    <span class="titulo-solicitacoes">Grid de solicitações</span>
                     <div class="grupo-filtros">
-                        <button class="botao-filtro ativo">Todos</button>
-                        <button class="botao-filtro">Transporte</button>
-                        <button class="botao-filtro">Castração</button>
-                        <button class="botao-filtro">Atendimento</button>
+                        <button class="botao-filtro ativo" onclick="filtrar(this)">Todos</button>
+                        <button class="botao-filtro" onclick="filtrar(this)">Transporte</button>
+                        <button class="botao-filtro" onclick="filtrar(this)">Castração</button>
+                        <button class="botao-filtro" onclick="filtrar(this)">Atendimento</button>
                     </div>
                 </div>
 
