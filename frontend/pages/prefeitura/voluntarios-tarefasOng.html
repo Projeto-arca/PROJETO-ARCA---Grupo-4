@@ -6,23 +6,25 @@
   <title>Programa ARCA – Voluntários e Tarefas</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="../../assets/css/voluntarios-tarefas.css"/>
+  <link rel="stylesheet" href="../../assets/css/style.css"/>
+  <link rel="stylesheet" href="../../assets/css/dashboardONG.css"/>
+  <script src="../../assets/js/dashboardONG.js"></script>
 </head>
 <body>
 
   
-  <nav class="navbar">
-    <div class="nav-brand">Programa Arca</div>
-    <div class="nav-search">
-      <input type="text" placeholder="Buscar voluntário ou tarefa" class="nav-search-input"/>
-    </div>
-    <div class="nav-dropdown">
-      <select class="nav-select" onchange="window.location.href=this.value">
-        <option value="">Gestão de Voluntários</option>
-        <option value="../../../index.html">Sair</option>
-        <option value="../ong/dashboardOng.html">Dashboard</option>
-         <option value="../ong/solicitacoesONG.html">Central de Solicitações</option>
-        <option value="../tutor/ficha-animalong.html">Ficha do Animal</option>
-      </select>
+  <nav class="barra-navegacao">
+    <span class="barra-logo">Programa Arca</span>
+    <input class="barra-busca" type="search" placeholder="Buscar voluntário ou tarefa">
+    <div class="menu-usuario">
+      <button class="barra-botao-usuario" onclick="alternarMenu()">Gestão de Voluntários &#8964;</button>
+      <div class="menu-dropdown" id="menu-dropdown">
+        <a href="../../../index.html">Sair</a>
+        <a href="../ong/dashboardOng.html">Dashboard</a>
+        <a href="../ong/solicitacoesONG.html">Central de Solicitações</a>
+        <a href="../tutor/ficha-animalong.html">Ficha do Animal</a>
+        <a href="voluntarios-tarefasOng.html" class="menu-item-ativo">Gestão de Voluntários</a>
+      </div>
     </div>
   </nav>
 
