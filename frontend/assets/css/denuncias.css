@@ -36,90 +36,53 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 input, textarea, select { font-family: var(--font); }
 
 .navbar {
-  position: fixed;
-  inset: 0 0 auto 0;
-  z-index: 200;
-  height: var(--navbar-h);
-  background: var(--verde-escuro);
-  display: flex;
-  align-items: center;
-  padding: 0 28px;
-  gap: 16px;
-  box-shadow: 0 2px 12px rgba(0,0,0,.18);
+  background-color: #1f4f40;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 32px;
 }
 
 .navbar__logo {
-  font-size: 15px;
-  font-weight: 800;
-  color: #ffffff;
-  letter-spacing: -.2px;
-  white-space: nowrap;
-  flex-shrink: 0;
+  font-weight: 700;
+    font-size: 1.2rem;
 }
 
 .navbar__busca-wrapper {
-  flex: 1;
-  max-width: 460px;
-  margin: 0 auto;
+   flex-grow: 1;
+    max-width: 600px;
+    margin: 0 40px;
 }
 
 .navbar__busca {
-  width: 100%;
-  padding: 8px 15px;
-  border: none;
-  border-radius: var(--radius-md);
-  font-size: 13.5px;
-  font-weight: 400;
-  color: var(--txt-escuro);
-  background: #ffffff;
-  outline: none;
-  transition: box-shadow .2s;
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 0.95rem;
 }
 
 .navbar__busca::placeholder { color: var(--txt-claro); }
 .navbar__busca:focus { box-shadow: 0 0 0 3px rgba(255,255,255,.22); }
 
 .navbar__menu {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  margin-left: auto;
+   display: flex;
+   gap: 24px;
 }
 
 .navbar__menu a {
-  padding: 7px 14px;
-  border-radius: var(--radius-sm);
-  font-size: 13.5px;
-  font-weight: 600;
-  color: rgba(255,255,255,.78);
-  transition: background .15s, color .15s;
+     color: #aebfb8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
-.navbar__menu a:hover { background: rgba(255,255,255,.1); color: #fff; }
-
-.navbar__menu .denunciar a {
-  color: #ff8a80;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.navbar__menu .denunciar a:hover { background: rgba(217,48,37,.15); }
-
-.navbar__hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  padding: 6px;
-  border-radius: var(--radius-sm);
-  margin-left: auto;
-}
-
-.navbar__hamburger span {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background: rgba(255,255,255,.85);
-  border-radius: 2px;
+.navbar__menu a.active, .navbar__menu a:hover {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 4px;
 }
 
 .navbar__drawer {
