@@ -47,6 +47,7 @@ input, textarea, select { font-family: var(--font); }
 .navbar__logo {
   font-weight: 700;
     font-size: 1.2rem;
+  font: sans-serif;
 }
 
 .navbar__busca-wrapper {
